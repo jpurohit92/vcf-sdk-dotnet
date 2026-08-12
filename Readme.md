@@ -1,4 +1,4 @@
-# End-to-End Guide: VMware vSphere .NET 8 SDK Generation & Build Pipeline
+VMware vSphere .NET 8 SDK Generation & Build Pipeline
 
 This documentation provides a comprehensive, step-by-step walkthrough for configuring, generating, building, and running strongly-typed .NET 8 SDKs for both the VMware vSphere Automation REST API and the vSphere Infrastructure VI/JSON API (Vim25) using OpenAPI Generator and Docker.
 
