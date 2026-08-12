@@ -1,1 +1,9 @@
 error.txt
+
+# Generated SDK output (regenerate via generateSDK.sh)
+InternalOpenApi/
+InternalViJson/
+
+# Build artifacts
+bin/
+obj/

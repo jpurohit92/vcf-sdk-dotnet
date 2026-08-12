@@ -15,7 +15,7 @@ This documentation provides a comprehensive, step-by-step walkthrough for config
 9. [Execution & Testing](#9-execution--testing)
 10. [Troubleshooting Common Issues](#10-troubleshooting-common-issues)
 
-## 1. Overview & Architecture
+## 1. Overview 
 
 When interacting with VMware vSphere 8.0+, developers typically interact with two distinct endpoints:
 
@@ -54,7 +54,7 @@ Organize your root workspace directory (`vcf-sdk-dotnet`) to follow this exact s
 vcf-sdk-dotnet/
 ├── resources/
 │   ├── vi-json.yaml                   # OpenAPI spec for VI/JSON API
-│   └── vsphere-automation.yaml        # OpenAPI spec for REST API
+│   └── vcenter.yml        # OpenAPI spec for REST API
 ├── templates/
 │   └── csharp/
 │       └── ApiClient.mustache         # Custom serialization template override
