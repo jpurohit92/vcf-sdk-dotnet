@@ -67,9 +67,9 @@ class Program
         Console.WriteLine("               REST API DEMO                      ");
         Console.WriteLine("==================================================");
 
-        string vcenterUrl = "https://holovc01.holo.lab/api";
+        string vcenterUrl = "https://yourserver";
         string username   = "administrator@vsphere.local";
-        string password   = "VMware1!";
+        string password   = "somePass";
 
         var authConfig = new RestConfig
         {
