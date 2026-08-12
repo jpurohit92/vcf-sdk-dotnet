@@ -1,0 +1,15 @@
+# Vcenter.Automation.OpenApi.Model.EsxSettingsClustersVmsOvfResource
+The Esx.Settings.Clusters.Vms.OvfResource schema contains properties that describe the location of an OVF package and a configuration for its download.  This schema was added in __vSphere API 9.0.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**LocationType** | **string** | Location type of OVF package.  Possible values:   - &#x60;REMOTE_FILE&#x60;: The OVF package is hosted on a file server.   - &#x60;LOCAL_FILE&#x60;: The OVF package is located on the local VC file system.   For more information see: *Esx.Settings.Clusters.Vms.OvfResource.LocationType*.  This property was added in __vSphere API 9.0.0.0__. | 
+**Url** | **string** | URL to the file server or the local VC file system where the OVF package can be downloaded. The supported URI schemes are http, https, and file.  This property was added in __vSphere API 9.0.0.0__.  This property is optional and it is only relevant when the value of location_type is one of *Esx.Settings.Clusters.Vms.OvfResource.LocationType.REMOTE_FILE* or *Esx.Settings.Clusters.Vms.OvfResource.LocationType.LOCAL_FILE*. | [optional] 
+**SslCertificateValidation** | **string** | Configuration for SSL Certificate validation of the URL specified by the url.  Possible values:   - &#x60;ENABLED&#x60;: The certificate must be fully validated by the system.   - &#x60;DISABLED&#x60;: The certificate validation is disabled. The system trusts any certificate.   For more information see: *Esx.Settings.Clusters.Vms.OvfResource.SslCertificateValidation*.  This property was added in __vSphere API 9.0.0.0__.  This property is optional and it is only relevant when the value of location_type is *Esx.Settings.Clusters.Vms.OvfResource.LocationType.REMOTE_FILE*. | [optional] 
+**Certificate** | **string** | The ssl certificate that is to be trusted by vLCM when downloading the OVF package from a file server.  This property was added in __vSphere API 9.0.0.0__.  If missing or &#x60;null&#x60; the system validates the file server certificate against the system trusted CAs. | [optional] 
+**AuthenticationScheme** | **string** | The authentication scheme needed to access the OVF URL.    The supported schemes are listed in *Esx.Settings.Clusters.Vms.AuthenticationScheme*.    If the scheme is not missing or &#x60;null&#x60; and is not set to *Esx.Settings.Clusters.Vms.AuthenticationScheme.NONE* then *Esx.Settings.Clusters.Vms.OvfResource.url* must point to the VC.  Possible values:   - &#x60;NONE&#x60;: Access doesn&#39;t require authentication.   - &#x60;VMWARE_SESSION_ID&#x60;: Access requires VMware client sessionID.   For more information see: *Esx.Settings.Clusters.Vms.AuthenticationScheme*.  This property was added in __vSphere API 9.1.0.0__.  If missing or &#x60;null&#x60; default value is *Esx.Settings.Clusters.Vms.AuthenticationScheme.NONE*. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

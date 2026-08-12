@@ -1,0 +1,10 @@
+# Vcenter.ViJson.OpenApi.Model.ClusterDasConfigInfoServiceStateEnum
+Possible states of an HA service.  All services support the disabled and enabled states.  Possible values: - `disabled`: HA service is disabled. - `enabled`: HA service is enabled. 
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

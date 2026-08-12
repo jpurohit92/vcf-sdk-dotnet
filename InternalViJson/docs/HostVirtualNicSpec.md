@@ -1,0 +1,23 @@
+# Vcenter.ViJson.OpenApi.Model.HostVirtualNicSpec
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**DynamicProperty** | [**List&lt;DynamicProperty&gt;**](DynamicProperty.md) | Set of dynamic properties.  This property is optional because only the properties of an object that are unknown to a client will be part of this set. This property is not readonly just in case we want to send such properties from a client in the future.  | [optional] 
+**Ip** | [**HostIpConfig**](HostIpConfig.md) | IP configuration on the virtual network adapter.  | [optional] 
+**Mac** | **string** | Media access control (MAC) address of the virtual network adapter.  | [optional] 
+**DistributedVirtualPort** | [**DistributedVirtualSwitchPortConnection**](DistributedVirtualSwitchPortConnection.md) | *DistributedVirtualPort* or *DistributedVirtualPortgroup* connection.  To specify a port connection, set *DistributedVirtualSwitchPortConnection.switchUuid* and *DistributedVirtualSwitchPortConnection.portKey* properties. To specify a portgroup connection, set *DistributedVirtualSwitchPortConnection.switchUuid* and *DistributedVirtualSwitchPortConnection.portgroupKey* properties.  When reconfiguring a virtual NIC, this property indicates the new portgroup to which the virtual NIC should connect. You can specify this property only if you do not specify *HostVirtualNicSpec.distributedVirtualPort* and *HostVirtualNicSpec.opaqueNetwork*  | [optional] 
+**Portgroup** | **string** | Portgroup (*HostPortGroup*) to which the virtual NIC is connected.  When reconfiguring a virtual NIC, this property indicates the new portgroup to which the virtual NIC should connect. You can specify this property only if you do not specify *HostVirtualNicSpec.distributedVirtualPort* and *HostVirtualNicSpec.opaqueNetwork*  | [optional] 
+**Mtu** | **int** | Maximum transmission unit for packets size in bytes for the virtual NIC.  If not specified, the Server will use the system default value.  | [optional] 
+**TsoEnabled** | **bool** | Flag enabling or disabling TCP segmentation offset for a virtual NIC.  If not specified, a default value of true will be used.  | [optional] 
+**NetStackInstanceKey** | **string** | The NetStackInstance that the virtual NIC uses, the value of this property is default to be *defaultTcpipStack*  | [optional] 
+**OpaqueNetwork** | [**HostVirtualNicOpaqueNetworkSpec**](HostVirtualNicOpaqueNetworkSpec.md) | Opaque network (*HostOpaqueNetworkInfo*) to which the virtual NIC is connected.  When reconfiguring a virtual NIC, this property indicates the specification of opaque network to which the virtual NIC should connect. You can specify this property only if you do not specify *HostVirtualNicSpec.distributedVirtualPort* and *HostVirtualNicSpec.portgroup*.  | [optional] 
+**ExternalId** | **string** | An ID assigned to the vmkernel adapter by external management plane.  The value and format of this property is determined by external management plane, and vSphere doesn&#39;t do any validation. It&#39;s also up to external management plane to set, unset or maintain this property.  This property is applicable only when *HostVirtualNicSpec.opaqueNetwork* property is set, otherwise it&#39;s value is ignored.  | [optional] 
+**PinnedPnic** | **string** | The physical nic to which the vmkernel adapter is pinned.  Setting this value ensures that the virtual NIC will access external network only via the the specified physical NIC.  This property is applicable only when *HostVirtualNicSpec.opaqueNetwork* property is set. If the vmkernel adapter is connected to a portgroup or dvPort, then such pinning can be achieved by configuring correct teaming policy on the portgroup or dvPort or dvPortgroup that is connected to virtual NIC.  | [optional] 
+**IpRouteSpec** | [**HostVirtualNicIpRouteSpec**](HostVirtualNicIpRouteSpec.md) | The ip route configuration used by the vmkernel adapter.  This attribute allows the vmkernel adapter to specify its own default gateway.  | [optional] 
+**SystemOwned** | **bool** | Deprecated as of vSphere API 9, use *HostVirtualNic.owner* instead.  Set to true when the vmkernel adapter is configured by other system indirectly other than by the user directly.  | [optional] 
+**DpuId** | **string** | The identifier of the DPU hosting the vmknic.  If vmknic is on ESX host, dpuId will be unset.  ***Since:*** vSphere API Release 8.0.0.1  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

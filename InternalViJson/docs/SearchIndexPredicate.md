@@ -1,0 +1,14 @@
+# Vcenter.ViJson.OpenApi.Model.SearchIndexPredicate
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**PropertyPath** | **string** | Specifies the resource model property to be compared.  Only properties of the following types may be used for comparisons in predicates: - &#x60;boolean&#x60; - &#x60;byte&#x60; - &#x60;short&#x60; - &#x60;int&#x60; - &#x60;long&#x60; - &#x60;float&#x60; - &#x60;double&#x60; - &#x60;String&#x60; - &#x60;Enum&#x60; - &#x60;ManagedObjectReference&#x60; - &#x60;DateTime&#x60; - &#x60;URI&#x60;    The property can be: - top level property name e.g. &#x60;runtime&#x60; - dot-separated chain of property names to indicate a child property.   e.g. &#x60;runtime.powerState&#x60; - the special identifier property _@moRef_ which will extract the   corresponding identifier &#x60;ManagedObjectReference&#x60; of the object    If the property is an array of &#x60;DataObject&#x60; you can additionally: - index a specific object by its \&quot;key\&quot; property   example with string key &#x60;config.network.pnic[\&quot;key-vim.host.PhysicalNic-vmnic0\&quot;]&#x60;   example with int key &#x60;config.hardware[10]&#x60; - get a specific property of specific object   e.g. &#x60;config.network.pnic[\&quot;key-vim.host.PhysicalNic-vmnic0\&quot;].mac&#x60; - use array aggregation to obtain specific properties from all elements   e.g. &#x60;config.network.pnic[*].mac&#x60;    Please note that tupling is not supported in filters.  | 
+**Operator** | **string** | The operator to use for comparison of the property value.  Supported operators are listed in *SearchIndexPredicateComparisonOperator_enum*.  | 
+**ArrayOperator** | **string** | The operator should be used only for properties, which return an array as their value.  It specifies one of the options defined in *SearchIndexPredicateArrayOperator_enum*. The operator MUST be set for array values and unset for non-array values. This operator MUST always be used in combination with *SearchIndexPredicate.operator*.  | [optional] 
+**ComparableValue** | [**Any**](Any.md) | The value against which to compare the property value.  The type of the value must be one of the types enumerated in *#property*.  Must be set for all comparison operators except *In* and *NotIn*.  | [optional] 
+**ComparableList** | [**List&lt;Any&gt;**](Any.md) | The list of values to test for equality or inequality against the property value when operator *In* or *NotIn* is used.  The type of each value in the list must be one of the types enumerated in *#property*. The list cannot be empty.  Must be set for operator *In* or *NotIn*.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

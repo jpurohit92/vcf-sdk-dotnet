@@ -1,0 +1,285 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/vcf-sdk-dotnet.csproj": {}
+  },
+  "projects": {
+    "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/Vcenter.Automation.OpenApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/Vcenter.Automation.OpenApi.csproj",
+        "projectName": "Vcenter.Automation.OpenApi",
+        "projectPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/Vcenter.Automation.OpenApi.csproj",
+        "packagesPath": "/Users/jatinpurohit/.nuget/packages/",
+        "outputPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jatinpurohit/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/Cellar/dotnet/10.0.302/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "JsonSubTypes": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/10.0.302/libexec/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/Vcenter.ViJson.OpenApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/Vcenter.ViJson.OpenApi.csproj",
+        "projectName": "Vcenter.ViJson.OpenApi",
+        "projectPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/Vcenter.ViJson.OpenApi.csproj",
+        "packagesPath": "/Users/jatinpurohit/.nuget/packages/",
+        "outputPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jatinpurohit/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/Cellar/dotnet/10.0.302/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "JsonSubTypes": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/10.0.302/libexec/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/vcf-sdk-dotnet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/vcf-sdk-dotnet.csproj",
+        "projectName": "vcf-sdk-dotnet",
+        "projectPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/vcf-sdk-dotnet.csproj",
+        "packagesPath": "/Users/jatinpurohit/.nuget/packages/",
+        "outputPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jatinpurohit/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/Cellar/dotnet/10.0.302/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/Vcenter.Automation.OpenApi.csproj": {
+                "projectPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalOpenApi/src/Vcenter.Automation.OpenApi/Vcenter.Automation.OpenApi.csproj"
+              },
+              "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/Vcenter.ViJson.OpenApi.csproj": {
+                "projectPath": "/Users/jatinpurohit/Documents/OpenAPI/vcf-sdk-dotnet/InternalViJson/src/Vcenter.ViJson.OpenApi/Vcenter.ViJson.OpenApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "JsonSubTypes": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[114.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/10.0.302/libexec/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

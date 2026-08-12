@@ -1,0 +1,6 @@
+{
+  "targetFramework": "net8.0",
+  "library": "httpclient",
+  "useOneOfDiscriminatorLookup": true,
+  "nullableReferenceTypes": true
+}

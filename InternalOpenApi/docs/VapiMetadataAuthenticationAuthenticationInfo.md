@@ -1,0 +1,13 @@
+# Vcenter.Automation.OpenApi.Model.VapiMetadataAuthenticationAuthenticationInfo
+The Vapi.Metadata.Authentication.AuthenticationInfo schema describes the authentication information. Authentication information could be specified for a package element, service elenent or an operation element.    Using the authentication scheme information, a client invoking an API call from any resource can figure out what kind of credentials are needed for that API call.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**SchemeType** | **string** | The type of the authentication scheme.  Possible values:   - &#x60;SESSIONLESS&#x60;: Indicates that the scheme is a session less authentication scheme, the user is authenticated on every operation. There is no explicit session establishment.   - &#x60;SESSION_AWARE&#x60;: Indicates that the scheme is a session aware authentication scheme. It requires an explicit login before executing a operation and logout when a session terminates. A resource might choose to have a session aware scheme if it wants to associate some state corresponding to the user until the user logs out or if it wants to mitigate the cost of authenticating the user on every operation.   For more information see: *Vapi.Metadata.Authentication.AuthenticationInfo.SchemeType*. | 
+**SessionManager** | **string** | In a session aware authentication scheme, a session manager is required that supports &#x60;create&#x60;, &#x60;delete&#x60; and &#x60;keepAlive&#x60; operations. The fully qualified resource name of the session manager is provided in *Vapi.Metadata.Authentication.AuthenticationInfo.session_manager* property. This resource is responsible for handling sessions.  This property is optional and it is only relevant when the value of scheme_type is *Vapi.Metadata.Authentication.AuthenticationInfo.SchemeType.SESSION_AWARE*. | [optional] 
+**Scheme** | **string** | String identifier of the authentication scheme.    Following are the supported authentication schemes by the infrastructure:     - The identifier &#x60;com.vmware.vapi.std.security.saml_hok_token&#x60; for SAML holder of key token based authentication mechanism.     - The identifier &#x60;com.vmware.vapi.std.security.bearer_token&#x60; for SAML bearer token based authentication mechanism.     - The identifier &#x60;com.vmware.vapi.std.security.session_id&#x60; for session based authentication mechanism.     - The identifier &#x60;com.vmware.vapi.std.security.user_pass&#x60; for username and password based authentication mechanism.    | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -1,0 +1,18 @@
+# Vcenter.Automation.OpenApi.Model.VcenterVmHardwareEthernetUpdateSpec
+The Vcenter.Vm.Hardware.Ethernet.UpdateSpec schema describes the updates to be made to the configuration of a virtual Ethernet adapter.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**UptCompatibilityEnabled** | **bool** | Flag indicating whether Universal Pass-Through (UPT) compatibility should be enabled on this virtual Ethernet adapter.    This property may be modified at any time, and changes will be applied the next time the virtual machine is powered on.  If missing or &#x60;null&#x60;, the value is unchanged. Must be missing or &#x60;null&#x60; if the emulation type of the virtual Ethernet adapter is not *Vcenter.Vm.Hardware.Ethernet.EmulationType.VMXNE_t3*. | [optional] 
+**UptV2CompatibilityEnabled** | **bool** | Flag indicates whether Uniform Pass-through version 2(UPTv2) compatibility is enabled on this network adapter. To enable this feature, the network adapter must connect to a network backed by DPU (Data Processing Unit) and network offloading must be enabled on the network. This property can be only modified when virtual machine is powered off.  This property was added in __vSphere API 8.0.0.1__.  If missing or &#x60;null&#x60;, the value is unchanged. Must be missing or &#x60;null&#x60; if the emulation type of the virtual Ethernet adapter is not *Vcenter.Vm.Hardware.Ethernet.EmulationType.VMXNE_t3*. | [optional] 
+**MacType** | **string** | MAC address type.    This property may be modified at any time, and changes will be applied the next time the virtual machine is powered on.  Possible values:   - &#x60;MANUAL&#x60;: MAC address is assigned statically.   - &#x60;GENERATED&#x60;: MAC address is generated automatically.   - &#x60;ASSIGNED&#x60;: MAC address is assigned by vCenter Server.   For more information see: *Vcenter.Vm.Hardware.Ethernet.MacAddressType*.  If missing or &#x60;null&#x60;, the value is unchanged. | [optional] 
+**MacAddress** | **string** | MAC address.    This property may be modified at any time, and changes will be applied the next time the virtual machine is powered on.  If missing or &#x60;null&#x60;, the value is unchanged. Must be specified if *Vcenter.Vm.Hardware.Ethernet.UpdateSpec.mac_type* is *Vcenter.Vm.Hardware.Ethernet.MacAddressType.MANUAL*. Must be missing or &#x60;null&#x60; if the MAC address type is not *Vcenter.Vm.Hardware.Ethernet.MacAddressType.MANUAL*. | [optional] 
+**WakeOnLanEnabled** | **bool** | Flag indicating whether wake-on-LAN should be enabled on this virtual Ethernet adapter.    This property may be modified at any time, and changes will be applied the next time the virtual machine is powered on.  If missing or &#x60;null&#x60;, the value is unchanged. | [optional] 
+**Backing** | [**VcenterVmHardwareEthernetBackingSpec**](VcenterVmHardwareEthernetBackingSpec.md) | Physical resource backing for the virtual Ethernet adapter.    This property may be modified at any time, and changes will be applied the next time the virtual machine is powered on.  If missing or &#x60;null&#x60;, the value is unchanged. | [optional] 
+**StartConnected** | **bool** | Flag indicating whether the virtual device should be connected whenever the virtual machine is powered on.  If missing or &#x60;null&#x60;, the value is unchanged. | [optional] 
+**AllowGuestControl** | **bool** | Flag indicating whether the guest can connect and disconnect the device.  If missing or &#x60;null&#x60;, the value is unchanged. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

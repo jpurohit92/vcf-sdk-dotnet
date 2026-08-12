@@ -1,0 +1,15 @@
+# Vcenter.ViJson.OpenApi.Model.VsanPrepareVsanForVcsaSpec
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**VsanDiskMappingCreationSpec** | [**VimVsanHostDiskMappingCreationSpec**](VimVsanHostDiskMappingCreationSpec.md) | If set, vCSA Deployer will claim those disks as vSAN disk groups, and a vSAN datastore will be created.  By passing in this spec, it implies the host will be contributing disk storage to a vSAN cluster, therefore vSAN will be automatically enabled on the host, if it&#39;s not yet enabled.  | [optional] 
+**VsanDataEfficiencyConfig** | [**VsanDataEfficiencyConfig**](VsanDataEfficiencyConfig.md) | The data efficiency config for vSAN.  | [optional] 
+**TaskId** | **string** | Unique identifier of the task this progress report is for.  | [optional] 
+**VsanDataEncryptionConfig** | [**VsanHostEncryptionInfo**](VsanHostEncryptionInfo.md) | The data encryption config that will be used to bootstrap single node vSAN cluster, this config contains the fields as below: enabled: True if encryption should be enabled.  kmipServers: Array of *KmipServerSpec* For AWS, KMS server address is AWS KMS key ARN starting with \&quot;arn:aws\&quot; kmsServerCerts: Certificates of Key Management Servers in PEM encoding. Host will use these certificates to decide if a KMS should be trusted or not. clientKey: Client private key. Host will use this key for authentication when connecting to KMS. clientCert: Client certificate in PEM encoding. Host will use this certificate for authentication when connecting to KMS. Three kms types(KMIP, AWS, NKP) are supported for now. And each KMS type requires different fields as below: &lt;table cellspacing&#x3D;\&quot;0\&quot;&gt; &lt;tr&gt; &lt;th&gt;KMS type&lt;/th&gt; &lt;th&gt;Required fields&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;KMIP&lt;/td&gt; &lt;td&gt; - enabled - kmipServers - kmsServerCerts - clientKey - clientCert    &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;AWS&lt;/td&gt; &lt;td&gt; - enabled - kmipServers - kmsServerCerts    &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;NKP&lt;/td&gt; &lt;td&gt; - enabled    &lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;  | [optional] 
+**VsanAddStoragePoolDiskSpec** | [**VsanAddStoragePoolDiskSpec**](VsanAddStoragePoolDiskSpec.md) | If set, vCSA Deployer will claim those disks as vSAN ESA storage pool, and a vSAN ESA datastore will be created.  By passing in this spec, it implies the host will be contributing disk storage to a vSAN ESA cluster, therefore vSAN ESA will be automatically enabled on the host, if it&#39;s not yet enabled. Note: This paramemter cannot be used together with *VsanPrepareVsanForVcsaSpec.vsanDiskMappingCreationSpec*  | [optional] 
+**CreateNativeKeyProviderSpec** | [**VsanHostCreateNativeKeyProviderSpec**](VsanHostCreateNativeKeyProviderSpec.md) | Specification used to create native key provider on host.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

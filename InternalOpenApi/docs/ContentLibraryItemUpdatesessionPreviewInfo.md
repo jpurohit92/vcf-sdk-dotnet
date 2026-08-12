@@ -1,0 +1,14 @@
+# Vcenter.Automation.OpenApi.Model.ContentLibraryItemUpdatesessionPreviewInfo
+The Content.Library.Item.Updatesession.PreviewInfo schema contains information about the files being uploaded in the update session.  This schema was added in __vSphere API 6.8__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**State** | **string** | Indicates the state of the preview of the update session.  Possible values:   - &#x60;UNAVAILABLE&#x60;: There are no files in the update session OR a preview is not possible for the files currently in the update session. However, preview may be possible after metadata files such as OVF descriptor are added to the session. In this case the state will transition to PREPARING.   - &#x60;NOT_APPLICABLE&#x60;: Preview is not possible for this update session. This state is reached when there are no metadata files in the update session and user invokes a session complete operation.   - &#x60;PREPARING&#x60;: A preview is being prepared for the files currently in the update session. This state is reached when the applicable metadata files are added to the update session but their content is not fully uploaded yet. For OVF item type, this state indicates that the OVF descriptor file is currently being uploaded.   - &#x60;AVAILABLE&#x60;: Preview is available for this update session. It is possible to review certificate details and warnings, if any. This state is reached when the applicable metadata files in the session have been fully uploaded.   For more information see: *Content.Library.Item.Updatesession.PreviewInfo.State*.  This property was added in __vSphere API 6.8__. | 
+**CertificateInfo** | [**ContentLibraryItemUpdatesessionCertificateInfo**](ContentLibraryItemUpdatesessionCertificateInfo.md) | The certificate information of the signed update session content.  This property was added in __vSphere API 6.8__.  This property is missing or &#x60;null&#x60; if the update session content is not signed. | [optional] 
+**Warnings** | [**List&lt;ContentLibraryItemUpdatesessionPreviewWarningInfo&gt;**](ContentLibraryItemUpdatesessionPreviewWarningInfo.md) | The list of warnings raised for this update session. Any warning which is not ignored by the client will, by default, fail the update session during session complete operation.  This property was added in __vSphere API 6.8__.  This property is optional and it is only relevant when the value of state is *Content.Library.Item.Updatesession.PreviewInfo.State.AVAILABLE*. | [optional] 
+**CertChain** | **List&lt;string&gt;** | Certificate chain in base64 format.  This property was added in __vSphere API 7.0.3.0__.  This property is missing or &#x60;null&#x60; if the update session content is not signed. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

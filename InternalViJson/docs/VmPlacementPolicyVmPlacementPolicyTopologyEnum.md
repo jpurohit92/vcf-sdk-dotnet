@@ -1,0 +1,10 @@
+# Vcenter.ViJson.OpenApi.Model.VmPlacementPolicyVmPlacementPolicyTopologyEnum
+Defines the infrastructure topology for which a VM placement policy should be enforced.  For example, for any policy that defines affinity or anti-affinity between VMs, the topology defines the granularity of the infrastructure at which the affinity or anti-affinity needs to be enforced. If 2 VMs are anti-affined, then: \\- Topology of host means those 2 VMs should be placed on 2 different hosts. \\- Topology of zone means those 2 VMs should be placed in 2 different zones.  Note: \\- This field may not apply to all types of placement policies derived from *VmPlacementPolicy*.  Possible values: - `Host`: Any VM placement policy with this *VmPlacementPolicyVmPlacementPolicyTopology_enum* will   be enforced at the granularity of ESXi host.      For example, a VM-VM affinity policy with this   *VmPlacementPolicyVmPlacementPolicyTopology_enum* would imply that the associated VMs   need to be placed on the same ESXi host. - `ClusterComputeResource`: Any VM placement policy with this *VmPlacementPolicyVmPlacementPolicyTopology_enum* will be   enforced at the granularity of a vCenter compute cluster.      For example, a VM-VM affinity policy with this   *VmPlacementPolicyVmPlacementPolicyTopology_enum* would imply that the associated VMs   need to be placed in the same vCenter compute cluster. - `VSphereZone`: Any VM placement policy with this *VmPlacementPolicyVmPlacementPolicyTopology_enum* will be   enforced at the granularity of vSphere Zone.      For example, a VM-VM affinity policy with this   *VmPlacementPolicyVmPlacementPolicyTopology_enum* would imply that the associated VMs   need to be placed in the same vSphere Zone.  ***Since:*** vSphere API Release 9.1.0.0 
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

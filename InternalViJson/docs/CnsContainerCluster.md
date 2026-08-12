@@ -1,0 +1,15 @@
+# Vcenter.ViJson.OpenApi.Model.CnsContainerCluster
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ClusterType** | **string** | Type of this container orchestrator cluster.  See *CnsClusterType_enum* for supported types and valid values for this field.  | 
+**ClusterId** | **string** | Cluster ID, provided by CNS client.     E.g.: vSphere volume plugin for Kubernetes cluster will be responsible for passing this container ID to CNS. This ID will get used to link a cluster with its container volumes, for filtering read operations.    CNS will not try to enforce uniqueness of this ID and will rely on clients to ensure uniqueness. Duplicate cluster ID will not cause any problem in provisioning workflow. But it will make cluster ID based filtering of volume less useful for end user.    For VANILLA flavor of Kubernetes, this field must be set to a unique ID. For example, a combination of name and UUID.    For WORKLOAD flavor of Kubernetes, this field will be set to the Virtual Center cluster managed object ID that has supervisor cluster enabled. The associated Kubernetes entity metadata for a CNS volume like namespace, PVC, PV and Pods will refer to corresponding entities in supervisor cluster.    For GUEST\\_CLUSTER flavor of Kubernetes, this field will be set to the sub resource pool managed object ID where the guest cluster is deployed.  | 
+**VSphereUser** | **string** | vSphere user corresponding to container orchestrator cluster user.     This property is aimed to help associate container volumes with the vSphere user, responsible for managing lifecycle of those volumes. vSphere user management, like keeping track that which vSphere user is responsible for which all container orchestrator clusters, needs to happen out-of-band and is out of the scope for CNS.    This information will not be used for authorization. It&#39;s for association purpose only.  | 
+**ClusterFlavor** | **string** | Flavor of this container orchestrator cluster.  See *CnsClusterFlavor_enum* for supported types and valid values for this field. If not set, the server will assume VANILLA cluster flavor.  | [optional] 
+**ClusterDistribution** | **string** | Distribution name of this container cluster.  The distribution name length is limited to 128 bytes.  | [optional] 
+**Delete** | **bool** | Default value is False if not set.  If True, the ContainerCluster should be deleted in VolumeManager.Update API call. But if any EntityMetadata is associating with this ContainerCluster, CNS Fault will be thrown. So to delete the ContainerCluster, user must also delete the EntityMetadata associate with this ContainerCluster. If False, the ContainerCluster should be added in VolumeManager.Update API call. This field will be ignored in VolumeManager.Create API call.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

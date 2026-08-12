@@ -1,0 +1,23 @@
+# Vcenter.Automation.OpenApi.Model.VcenterNamespacesMobilityVirtualmachinesImportsInfo
+The Vcenter.Namespaces.Mobility.Virtualmachines.Imports.Info schema represents an Import, containing both the spec and status.  This schema was added in __vSphere API 9.0.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Spec** | [**VcenterNamespacesMobilityVirtualmachinesImportsCreateSpec**](VcenterNamespacesMobilityVirtualmachinesImportsCreateSpec.md) | Specification of the desired behavior of the operation.  This property was added in __vSphere API 9.0.0.0__. | 
+**State** | [**VcenterNamespacesMobilityVirtualmachinesImportsState**](VcenterNamespacesMobilityVirtualmachinesImportsState.md) | Observed state of the operation.  This property was added in __vSphere API 9.0.0.0__. | 
+**Description** | [**VapiStdLocalizableMessage**](VapiStdLocalizableMessage.md) | Description of the operation associated with the task.  This property was added in __vSphere API 6.7__. | 
+**Service** | **string** | Identifier of the service containing the operation.  This property was added in __vSphere API 6.7__.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;com.vmware.vapi.service&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;com.vmware.vapi.service&#x60;. | 
+**Operation** | **string** | Identifier of the operation associated with the task.  This property was added in __vSphere API 6.7__.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;com.vmware.vapi.operation&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;com.vmware.vapi.operation&#x60;. | 
+**Parent** | **string** | Parent of the current task.  This property was added in __vSphere API 6.7__.  This property will be missing or &#x60;null&#x60; if the task has no parent.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;com.vmware.cis.task&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;com.vmware.cis.task&#x60;. | [optional] 
+**Target** | [**VapiStdDynamicID**](VapiStdDynamicID.md) | Identifier of the target created by the operation or an existing one the operation performed on.  This property was added in __vSphere API 6.7__.  This property will be missing or &#x60;null&#x60; if the operation has no target or multiple targets. | [optional] 
+**Status** | **string** | Status of the operation associated with the task.  Possible values:   - &#x60;PENDING&#x60;: The operation is in pending state.   - &#x60;RUNNING&#x60;: The operation is in progress.   - &#x60;BLOCKED&#x60;: The operation is blocked.   - &#x60;SUCCEEDED&#x60;: The operation completed successfully.   - &#x60;FAILED&#x60;: The operation failed.   For more information see: *Cis.Task.Status*.  This property was added in __vSphere API 6.7__. | 
+**Cancelable** | **bool** | Flag to indicate whether or not the operation can be cancelled. The value may change as the operation progresses.  This property was added in __vSphere API 6.7__. | 
+**Error** | **Object** | Description of the error if the operation status is \&quot;FAILED\&quot;.  This property was added in __vSphere API 6.7__.  If missing or &#x60;null&#x60; the description of why the operation failed will be included in the result of the operation (see *Cis.Task.Info.result*). | [optional] 
+**StartTime** | **DateTime** | Time when the operation is started.  This property was added in __vSphere API 6.7__.  This property is optional and it is only relevant when the value of status is one of *Cis.Task.Status.RUNNING*, *Cis.Task.Status.BLOCKED*, *Cis.Task.Status.SUCCEEDED*, or *Cis.Task.Status.FAILED*. | [optional] 
+**EndTime** | **DateTime** | Time when the operation is completed.  This property was added in __vSphere API 6.7__.  This property is optional and it is only relevant when the value of status is one of *Cis.Task.Status.SUCCEEDED* or *Cis.Task.Status.FAILED*. | [optional] 
+**User** | **string** | Name of the user who performed the operation.  This property was added in __vSphere API 6.7__.  This property will be missing or &#x60;null&#x60; if the operation is performed by the system. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

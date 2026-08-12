@@ -1,0 +1,17 @@
+# Vcenter.ViJson.OpenApi.Model.VirtualMachineSummary
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Vm** | [**ManagedObjectReference**](ManagedObjectReference.md) | Reference to the virtual machine managed object.  Refers instance of *VirtualMachine*.  | [optional] 
+**Runtime** | [**VirtualMachineRuntimeInfo**](VirtualMachineRuntimeInfo.md) | Runtime and state information of a running virtual machine.  Most of this information is also available when a virtual machine is powered off. In that case, it contains information from the last run, if available.  | 
+**Guest** | [**VirtualMachineGuestSummary**](VirtualMachineGuestSummary.md) | Guest operating system and VMware Tools information.  See *VirtualMachine.guest* for more information.  | [optional] 
+**Config** | [**VirtualMachineConfigSummary**](VirtualMachineConfigSummary.md) | Basic configuration information about the virtual machine.  This information is not available when the virtual machine is unavailable, for instance, when it is being created or deleted.  | 
+**Storage** | [**VirtualMachineStorageSummary**](VirtualMachineStorageSummary.md) | Storage information of the virtual machine.  It can be explicitly refreshed with the *VirtualMachine.RefreshStorageInfo* operation. In releases after vSphere API 5.0, vSphere Servers might not generate property collector update notifications for this property. To obtain the latest value of the property, you can use PropertyCollector methods RetrievePropertiesEx or WaitForUpdatesEx. If you use the PropertyCollector.WaitForUpdatesEx method, specify an empty string for the version parameter. Since this property is on a DataObject, an update returned by WaitForUpdatesEx may contain values for this property when some other property on the DataObject changes. If this update is a result of a call to WaitForUpdatesEx with a non-empty version parameter, the value for this property may not be current.  | [optional] 
+**QuickStats** | [**VirtualMachineQuickStats**](VirtualMachineQuickStats.md) | A set of statistics that are typically updated with near real-time regularity.  This data object type does not support notification, for scalability reasons. Therefore, changes in QuickStats do not generate property collector updates. To monitor statistics values, use the statistics and alarms modules instead.  | 
+**OverallStatus** | **ManagedEntityStatusEnum** | Overall alarm status on this node.  In releases after vSphere API 5.0, vSphere Servers might not generate property collector update notifications for this property. To obtain the latest value of the property, you can use PropertyCollector methods RetrievePropertiesEx or WaitForUpdatesEx. If you use the PropertyCollector.WaitForUpdatesEx method, specify an empty string for the version parameter. Since this property is on a DataObject, an update returned by WaitForUpdatesEx may contain values for this property when some other property on the DataObject changes. If this update is a result of a call to WaitForUpdatesEx with a non-empty version parameter, the value for this property may not be current.  | 
+**CustomValue** | [**List&lt;CustomFieldValue&gt;**](CustomFieldValue.md) | Custom field values.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

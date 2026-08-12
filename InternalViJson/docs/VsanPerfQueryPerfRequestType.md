@@ -1,0 +1,12 @@
+# Vcenter.ViJson.OpenApi.Model.VsanPerfQueryPerfRequestType
+The parameters of *VsanPerformanceManager.VsanPerfQueryPerf*. 
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**QuerySpecs** | [**List&lt;VsanPerfQuerySpec&gt;**](VsanPerfQuerySpec.md) | A array of VsanPerfQuerySpec objects. The VsanPerfQuerySpec object specifies a reference for an entity, plus optional criteria for filtering results. Only metrics for the entities that can be resolved are returned in any result.   The VsanPerfQuerySpec object in this operation can query for different metrics. Or, select all types of statistics for a single entity. See above for supported entity types, metric groups and metrics   The VsanPerfQuerySpec object supports wildcard query by setting UUID to &#39;\\*&#39;, it retrieves all entities based on the specified entity type, startTime, and endTime.   From version 8.0U2, the VsanPerfQuerySpec object supports multi-entity query for a single entity type and unified duration by setting queried node id to &#39;&amp;lt;UUID1&amp;gt;,&amp;lt;UUID2&amp;gt;,..&#39;, it will return all relevant entities according to the entity type, startTime and endTime. The maximum limit of the number of UUIDs is 400.   **Note**: To avoid bad performance and resource usage issues caused by massive stats data from a stats query. There are some validation checks: - In each query, the startTime and endTime must be specified in   the query spec. And the suggested time span is less than 24 hours. To query stats   for larger time range, please use paging mechanism. For example, split the time range   in to smaller ones, and use multiple status queries with smaller time ranges. - In each query, when there is no wildcard or multi-entity query specified in the parameter   querySpecs, the number of items within querySpecs should not exceed 100. When the parameter   querySpecs includes more than 100 items, please use the paging mechanism. - In each query, if there is wildcard query or multi-entity query, the parameter querySpecs   can only contain either one wildcard query or one multi-entity query.  | 
+**Cluster** | [**ManagedObjectReference**](ManagedObjectReference.md) | vSAN cluster. Ignored if called against host.  ***Required privileges:*** System.Read  Refers instance of *ComputeResource*.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -1,0 +1,15 @@
+# Vcenter.Automation.OpenApi.Model.VcenterVMRegisterSpec
+The Vcenter.VM.RegisterSpec schema contains information used to create a virtual machine from existing virtual machine files on storage.    The location of the virtual machine files on storage must be specified by providing either *Vcenter.VM.RegisterSpec.datastore* and *Vcenter.VM.RegisterSpec.path* or by providing *Vcenter.VM.RegisterSpec.datastore_path*. If *Vcenter.VM.RegisterSpec.datastore* and *Vcenter.VM.RegisterSpec.path* are set, *Vcenter.VM.RegisterSpec.datastore_path* must be missing or `null`, and if *Vcenter.VM.RegisterSpec.datastore_path* is set, *Vcenter.VM.RegisterSpec.datastore* and *Vcenter.VM.RegisterSpec.path* must be missing or `null`.  This schema was added in __vSphere API 6.8.7__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Datastore** | **string** | Identifier of the datastore on which the virtual machine&#39;s configuration state is stored.  This property was added in __vSphere API 6.8.7__.  If missing or &#x60;null&#x60;, *Vcenter.VM.RegisterSpec.path* must also be missing or &#x60;null&#x60; and *Vcenter.VM.RegisterSpec.datastore_path* must be set.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;Datastore&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;Datastore&#x60;. | [optional] 
+**Path** | **string** | Path to the virtual machine&#39;s configuration file on the datastore corresponding to {@link #datastore).  This property was added in __vSphere API 6.8.7__.  If missing or &#x60;null&#x60;, *Vcenter.VM.RegisterSpec.datastore* must also be missing or &#x60;null&#x60; and *Vcenter.VM.RegisterSpec.datastore_path* must be set. | [optional] 
+**DatastorePath** | **string** | Datastore path for the virtual machine&#39;s configuration file in the format \&quot;[datastore name] path\&quot;. For example \&quot;[storage1] Test-VM/Test-VM.vmx\&quot;.  This property was added in __vSphere API 6.8.7__.  If missing or &#x60;null&#x60;, both *Vcenter.VM.RegisterSpec.datastore* and *Vcenter.VM.RegisterSpec.path* must be set. | [optional] 
+**Name** | **string** | Virtual machine name.  This property was added in __vSphere API 6.8.7__.  If missing or &#x60;null&#x60;, the display name from the virtual machine&#39;s configuration file will be used. | [optional] 
+**Placement** | [**VcenterVMRegisterPlacementSpec**](VcenterVMRegisterPlacementSpec.md) | Virtual machine placement information.  This property was added in __vSphere API 6.8.7__.  This property is currently required. In the future, if this property is missing or &#x60;null&#x60;, the system will attempt to choose suitable resources on which to place the virtual machine. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

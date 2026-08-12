@@ -1,0 +1,15 @@
+# Vcenter.Automation.OpenApi.Model.VcenterNamespaceManagementProxyConfiguration
+The Vcenter.NamespaceManagement.ProxyConfiguration schema defines proxy configuration to be used by the Supervisor.  This schema was added in __vSphere API 7.0.3.00100__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ProxySettingsSource** | **string** | The source of the proxy settings. If *Vcenter.NamespaceManagement.ProxySettingsSource.VC_INHERITED* or *Vcenter.NamespaceManagement.ProxySettingsSource.NONE* is specified, then the other configuration in Vcenter.NamespaceManagement.ProxyConfiguration will be ignored.  Possible values:   - &#x60;VC_INHERITED&#x60;: Proxy settings will be inherited from the vCenter settings. vCenter and cluster settings will be kept in sync.   - &#x60;CLUSTER_CONFIGURED&#x60;: Proxy settings will be configured at the cluster level.   - &#x60;NONE&#x60;: No proxy settings will be applied to the cluster.   For more information see: *Vcenter.NamespaceManagement.ProxySettingsSource*.  This property was added in __vSphere API 7.0.3.00100__. | 
+**HttpsProxyConfig** | **string** | HTTPS proxy configuration. Examples:     - http://username:password@proxy.vmware.com:8080    - https://proxy.vmware.com:4443   This will be used if *Vcenter.NamespaceManagement.ProxySettingsSource.CLUSTER_CONFIGURED* is used for the source, otherwise this will be ignored.  This property was added in __vSphere API 7.0.3.00100__.  If missing or &#x60;null&#x60; no HTTPS proxy will be used. | [optional] 
+**HttpProxyConfig** | **string** | HTTP proxy configuration. Examples:     - http://username:password@proxy.vmware.com:8080    - https://proxy.vmware.com:4443   This will be used if *Vcenter.NamespaceManagement.ProxySettingsSource.CLUSTER_CONFIGURED* is used for the source, otherwise this will be ignored.  This property was added in __vSphere API 7.0.3.00100__.  If missing or &#x60;null&#x60; no HTTP proxy will be used. | [optional] 
+**NoProxyConfig** | **List&lt;string&gt;** | List of addresses that should be accessed directly. This will be used if *Vcenter.NamespaceManagement.ProxySettingsSource.CLUSTER_CONFIGURED* is used for the source, otherwise this will be ignored.  This property was added in __vSphere API 7.0.3.00100__.  If missing or &#x60;null&#x60; there won&#39;t be any excluded addresses. | [optional] 
+**TlsRootCaBundle** | **string** | Proxy TLS root CA bundle which will be used to verify the proxy&#39;s certificates. Every certificate in the bundle is expected to be in PEM format. This will be used if *Vcenter.NamespaceManagement.ProxySettingsSource.CLUSTER_CONFIGURED* is used for the source, otherwise this will be ignored.  This property was added in __vSphere API 7.0.3.00100__.  If missing or &#x60;null&#x60; only the vCenter certificates applied in VECS (VMware Endpoint Certificate Store) will be used. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

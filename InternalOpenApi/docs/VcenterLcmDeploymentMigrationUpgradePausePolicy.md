@@ -1,0 +1,10 @@
+# Vcenter.Automation.OpenApi.Model.VcenterLcmDeploymentMigrationUpgradePausePolicy
+The Vcenter.Lcm.Deployment.MigrationUpgrade.PausePolicy enum defines pause point in the upgrade workflow.The *POST /vcenter/lcm/deployment/migration-upgrade?action=apply* does not accept already passed pause points.  Possible values:   - `BEFORE_SWITCHOVER`: Instructs the upgrade workflow to stop before the switchover operation. The option cannot be set together with *Vcenter.Lcm.Deployment.MigrationUpgrade.ApplySpec.start_switchover*, if such configuration is attempted will result in *Vapi.Std.Errors.InvalidArgument*. Once the pause point is reach, *POST /vcenter/lcm/deployment/migration-upgrade?action=apply* needs to be called without a pause point (or a pause point that is later in the process) to resume the upgrade. The previous pause point is BEFORE_DATA_REPLICATION.    Stopping before the switchover operation means that the upgrade process will only deploy the target machine and replicate the data, but it will not do the switchover from the source to the target. The data replication continues in the background, so the downtime is minimal once the switchover is requested.    During the switchover the new target vCenter takes control and the old source vCenter is decommissioned. First, the services on the old vCenter are stopped. Second, the source identity (network, certificates and passwords) is transferred to the new machine. Third, the services on the new vCenter are started. Finally post health checks and post-upgrade configurations are executed. The switchover causes downtime from the stop of the services until they are started back on the new vCenter.   This enumeration was added in __vSphere API 9.0.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
