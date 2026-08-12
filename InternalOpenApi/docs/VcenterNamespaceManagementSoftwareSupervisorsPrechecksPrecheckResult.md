@@ -1,0 +1,13 @@
+# Vcenter.Automation.OpenApi.Model.VcenterNamespaceManagementSoftwareSupervisorsPrechecksPrecheckResult
+The Vcenter.NamespaceManagement.Software.Supervisors.Prechecks.PrecheckResult schema contains the detailed information about Supervisor upgrade pre-checks against individual upgrade version.  This schema was added in __vSphere API 8.0.3.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**TargetVersion** | **string** | Represents Supervisor upgrade version for which *Vcenter.NamespaceManagement.Software.Supervisors.Prechecks.PrecheckResult.conditions* belong to.  This property was added in __vSphere API 8.0.3.0__. | 
+**Status** | **string** | Represents the consolidated status of Supervisor upgrade pre-checks.  Possible values:   - &#x60;SUCCEEDED&#x60;: All conditions executed successfully.   - &#x60;RUNNING&#x60;: One or more conditions part of this condition group are in the running state and none of the other conditions are in *Vcenter.NamespaceManagement.Supervisors.Conditions.ConditionGroup.Status.ERROR* or *Vcenter.NamespaceManagement.Supervisors.Conditions.ConditionGroup.Status.WARNING* state.   - &#x60;WARNING&#x60;: One or more conditions part of this condition group are in warning state and none of the other conditions are in *Vcenter.NamespaceManagement.Supervisors.Conditions.ConditionGroup.Status.ERROR* state.   - &#x60;ERROR&#x60;: One or more conditions are in the error state.   - &#x60;UNKNOWN&#x60;: Indicates the status of one or more conditions part of this condition group can not be determined. Condition group status will be set to {#member UNKNOWN}, if all conditions are in unknown state or there is at least one condition in unknown state and all others are in *Vcenter.NamespaceManagement.Supervisors.Conditions.ConditionGroup.Status.SUCCEEDED* state.   For more information see: *Vcenter.NamespaceManagement.Supervisors.Conditions.ConditionGroup.Status*.  This property was added in __vSphere API 9.0.0.0__.  This property is optional because it was added in a newer version than its parent node. | [optional] 
+**Conditions** | [**List&lt;VcenterNamespaceManagementClustersCondition&gt;**](VcenterNamespaceManagementClustersCondition.md) | Supervisor upgrade pre-check results for *Vcenter.NamespaceManagement.Software.Supervisors.Prechecks.PrecheckResult.target_version*  This property was added in __vSphere API 8.0.3.0__. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

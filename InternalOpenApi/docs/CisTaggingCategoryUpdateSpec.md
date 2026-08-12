@@ -1,0 +1,14 @@
+# Vcenter.Automation.OpenApi.Model.CisTaggingCategoryUpdateSpec
+The Cis.Tagging.Category.UpdateSpec schema describes the updates to be made to an existing category.    Use the *PATCH /cis/tagging/category/{categoryId}* operation to modify a category. When you call the operation, specify the category identifier. You obtain the category identifier when you call the *POST /cis/tagging/category* operation. You can also retrieve an identifier by using the *GET /cis/tagging/category* operation.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** | The display name of the category.  If missing or &#x60;null&#x60; the name will not be modified. | [optional] 
+**Description** | **string** | The description of the category.  If missing or &#x60;null&#x60; the description will not be modified. | [optional] 
+**Cardinality** | **string** | The associated cardinality (Cardinality) of the category.  Possible values:   - &#x60;SINGLE&#x60;: An object can only be assigned one of the tags in this category. For example, if a category is \&quot;Operating System\&quot;, then different tags of this category would be \&quot;Windows\&quot;, \&quot;Linux\&quot;, and so on. In this case a VM object can be assigned only one of these tags and hence the cardinality of the associated category here is single.   - &#x60;MULTIPLE&#x60;: An object can be assigned several of the tags in this category. For example, if a category is \&quot;Server\&quot;, then different tags of this category would be \&quot;AppServer\&quot;, \&quot;DatabaseServer\&quot; and so on. In this case a VM object can be assigned more than one of the above tags and hence the cardinality of the associated category here is multiple.   For more information see: *Cis.Tagging.CategoryModel.Cardinality*.  If missing or &#x60;null&#x60; the cardinality will not be modified. | [optional] 
+**AssociableTypes** | **List&lt;string&gt;** | Object types to which this category&#39;s tags can be attached.    The set of associable types cannot be updated incrementally. For example, if *Cis.Tagging.Category.UpdateSpec.associable_types* originally contains {A,B,C} and you want to add D, then you need to pass {A,B,C,D} in your update specification. You also cannot remove any item from this set. For example, if you have {A,B,C}, then you cannot remove say {A} from it. Similarly, if you start with an empty set, then that implies that you can tag any object and hence you cannot later pass say {A}, because that would be restricting the type of objects you want to tag. Thus, associable types can only grow and not shrink.  If missing or &#x60;null&#x60; the associable types will not be modified. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

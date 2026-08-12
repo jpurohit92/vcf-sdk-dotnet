@@ -1,0 +1,10 @@
+# Vcenter.Automation.OpenApi.Model.EsxSettingsInventoryReportsTransitionSummaryHostsTransitionStatus
+The Esx.Settings.Inventory.Reports.TransitionSummary.Hosts.TransitionStatus enumerated type defines the different type of statuses a given standalone host can be during the transition or pre-transition.  Possible values:   - `NOT_DETECTED`: Transition workflow first needs the com.vmware.esx.settings.inventory.Inventory#extractInstalledImage operation to be executed. This status defines that the com.vmware.esx.settings.inventory.Inventory#extractInstalledImage operation is not executed or the result is not available for a given host.   - `DETECTING_IMAGE`: Defines that com.vmware.esx.settings.inventory.Inventory#extractInstalledImage operation is in-progress for a given host.   - `ELIGIBLE`: Defines that a given host is ready for transition from baseline managed to image managed. This also states that the given host is also eligible to be transitioned through the com.vmware.esx.settings.inventory.Inventory#transition workflow.   - `HOST_LEVEL_CONVERSION_REQUIRED`: Defines that the host is not ready for transition from baseline managed to image managed using com.vmware.esx.settings.inventory.Inventory#transition operation. In such case, the given standalone host cannot be transitioned using this workflow but can be done using existing standalone host workflow.   - `CONVERTING`: Defines that for a given standalone host is getting converted from baseline managed to image managed using com.vmware.esx.settings.inventory.Inventory#transition operation.   - `CONVERTED`: Defines the a given standalone host is successfully converted from baseline managed to image managed.   - `UNKNOWN`: Defines that the transition status of the standalone host is unknown.  This constant was added in __vSphere API 9.1.0.0__.   This enumeration was added in __vSphere API 9.0.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

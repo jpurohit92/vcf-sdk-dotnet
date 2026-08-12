@@ -1,0 +1,18 @@
+# Vcenter.Automation.OpenApi.Model.EsxSettingsClustersConfigurationSettingCompliance
+The Esx.Settings.Clusters.Configuration.SettingCompliance schema contains properties that describe a drift in an ESXi host setting. This structure describes a change in configuration value(set) or addition of configuration or deletion of configuration. In addition this structure also describes error encountered in case realization of configuration fails. When used to describe addition or deletion of a setting, if the setting is an instance in an array without an instance ID, the whole instance object is populated in target or current, respectively. When used to describe a drift in primitive type, current and target values are populated when applicable.  This schema was added in __vSphere API 8.0.1.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Path** | **string** | Full path to the setting within the desired document.  This property was added in __vSphere API 8.0.1.0__. | 
+**DisplayPath** | **List&lt;string&gt;** | A list of the display names for components of the value provided by *Esx.Settings.Clusters.Configuration.SettingCompliance.path* property.  This property was added in __vSphere API 9.0.0.0__.  This field is missing or &#x60;null&#x60; if the display names cannot be computed. | [optional] 
+**Current** | **string** | Value of setting on the ESXi host.  This property was added in __vSphere API 8.0.1.0__.  This field is missing or &#x60;null&#x60; if there is no host value to report. | [optional] 
+**Target** | **string** | Value of setting in the desired document.  This property was added in __vSphere API 8.0.1.0__.  This field is missing or &#x60;null&#x60; if there is no value in the desired document to report. | [optional] 
+**Type** | **string** | The data type of the property in document pointed by {#path}.  Possible values:   - &#x60;PRIMITIVE&#x60;: The property in drift is of primitive data type.   - &#x60;OBJECT&#x60;: The property in drift is of type object.   - &#x60;ARRAY_OF_OBJECTS&#x60;: The property in drift is of array of object data type.   - &#x60;REFERENCE&#x60;: The drift is in reference configuration.   - &#x60;ARRAY_OF_PRIMITIVES&#x60;: The property in drift is of array of primitive data type.   For more information see: *Esx.Settings.Clusters.Configuration.SettingCompliance.Type*.  This property was added in __vSphere API 9.0.0.0__.  This field is missing or &#x60;null&#x60; if the data type of the property is not available in the drift provided by the ESXi host. | [optional] 
+**ReferenceCurrent** | **string** | Value of the reference configuration on the ESXi host encoded as JSON.  This property was added in __vSphere API 9.0.0.0__.  This field is missing or &#x60;null&#x60; if host does not have reference configuration. | [optional] 
+**ReferenceTarget** | **string** | Value of the reference configuration in the desired state encoded as JSON.  This property was added in __vSphere API 9.0.0.0__.  This field is missing or &#x60;null&#x60; if desired state does not have reference configuration. | [optional] 
+**Error** | [**EsxSettingsNotification**](EsxSettingsNotification.md) | This field contains an error message that describes the reason for the setting to be non compliant.  This property was added in __vSphere API 9.1.0.0__.  This field is missing or &#x60;null&#x60; if solution configuration is successfully realized. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

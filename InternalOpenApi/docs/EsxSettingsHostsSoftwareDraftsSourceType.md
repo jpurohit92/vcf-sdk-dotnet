@@ -1,0 +1,10 @@
+# Vcenter.Automation.OpenApi.Model.EsxSettingsHostsSoftwareDraftsSourceType
+The Esx.Settings.Hosts.Software.Drafts.SourceType enumerated type defines possible values of sources to import software specification.  Possible values:   - `PULL`: Content is pulled from the URL location. The URL scheme of the value in {@link #pullLocation) can be http, https or file.   - `PUSH`: Content was previously uploaded using the file upload endpoint present on vCenter appliance. This endpoint is present at https://VCENTERFQDN:9087/vum-fileupload URL.   - `JSON_STRING`: The string representing the content of the software specification.   - `LATEST_RECOMMENDATION`: Content is from recommended image specification based on latest base image version. Recommendations can be generated using *POST /esx/settings/hosts/{host}/software/recommendations?action=generate*.   - `CURRENT_SERIES_RECOMMENDATION`: Content is from recommended image specification based on latest base image patch or update of the current series. For example, a host's current desired base image is 8.0. Recommendation engine will look into any recommendable image specification with 8.0 series base images available at depot manager and try to recommend the highest version within 8.0 series if possible. Let's say in this example, depot manager has 8.0 patch a and 8.0 update 1 base images. Recommendation engine would first validate all possible images based on 8.0 update 1. If it finds a valid one, it will store the recommended content with that series. This enum value will point to that stored recommended image content.    Recommendations can be generated using *POST /esx/settings/hosts/{host}/software/recommendations?action=generate*.   This enumeration was added in __vSphere API 8.0.0.1__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

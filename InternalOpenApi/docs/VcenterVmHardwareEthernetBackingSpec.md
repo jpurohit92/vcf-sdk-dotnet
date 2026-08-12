@@ -1,0 +1,13 @@
+# Vcenter.Automation.OpenApi.Model.VcenterVmHardwareEthernetBackingSpec
+The Vcenter.Vm.Hardware.Ethernet.BackingSpec schema provides a specification of the physical resource that backs a virtual Ethernet adapter.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Type** | **string** | Backing type for the virtual Ethernet adapter.  Possible values:   - &#x60;STANDARD_PORTGROUP&#x60;: vSphere standard portgroup network backing.   - &#x60;HOST_DEVICE&#x60;: Legacy host device network backing. Imported VMs may have virtual Ethernet adapters with this type of backing, but this type of backing cannot be used to create or to update a virtual Ethernet adapter.   - &#x60;DISTRIBUTED_PORTGROUP&#x60;: Distributed virtual switch backing.   - &#x60;OPAQUE_NETWORK&#x60;: Opaque network backing.   For more information see: *Vcenter.Vm.Hardware.Ethernet.BackingType*. | 
+**Network** | **string** | Identifier of the network that backs the virtual Ethernet adapter.  This property is optional and it is only relevant when the value of type is one of *Vcenter.Vm.Hardware.Ethernet.BackingType.STANDARD_PORTGROUP*, *Vcenter.Vm.Hardware.Ethernet.BackingType.DISTRIBUTED_PORTGROUP*, or *Vcenter.Vm.Hardware.Ethernet.BackingType.OPAQUE_NETWORK*.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;Network&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;Network&#x60;. | [optional] 
+**DistributedPort** | **string** | Key of the distributed virtual port that backs the virtual Ethernet adapter. Depending on the type of the Portgroup, the port may be specified using this field. If the portgroup type is early-binding (also known as static), a port is assigned when the Ethernet adapter is configured to use the port. The port may be either automatically or specifically assigned based on the value of this property. If the portgroup type is ephemeral, the port is created and assigned to a virtual machine when it is powered on and the Ethernet adapter is connected. This property cannot be specified as no free ports exist before use.  May be used to specify a port when the network specified on the network property is a static or early binding distributed portgroup. If missing or &#x60;null&#x60;, the port will be automatically assigned to the Ethernet adapter based on the policy embodied by the portgroup type. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

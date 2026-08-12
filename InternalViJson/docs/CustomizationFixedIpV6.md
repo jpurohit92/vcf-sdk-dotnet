@@ -1,0 +1,11 @@
+# Vcenter.ViJson.OpenApi.Model.CustomizationFixedIpV6
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**IpAddress** | **string** |  | 
+**SubnetMask** | **int** |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

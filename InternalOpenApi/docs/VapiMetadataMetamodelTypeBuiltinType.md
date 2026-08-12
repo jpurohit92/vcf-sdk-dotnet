@@ -1,0 +1,10 @@
+# Vcenter.Automation.OpenApi.Model.VapiMetadataMetamodelTypeBuiltinType
+The Vapi.Metadata.Metamodel.Type.BuiltinType enumerated type provides enumeration value for each of the built-in types present in the interface definition language type system.  Possible values:   - `VOID`: The built-in type is a void. The value is missing or `null`.   - `BOOLEAN`: The built-in type is a boolean. The value is true or false.   - `LONG`: The built-in type is a long. The value is a 64 bit signed integer.   - `DOUBLE`: The built-in type is a double. The value is a 64 bit floating point number.   - `STRING`: The built-in type is a string. The value is a variable-length sequence of zero or more unicode characters.   - `BINARY`: The built-in type is a binary. The value is a variable-length sequence of zero or more bytes.   - `SECRET`: The built-in type is a secret. The value is a variable-length sequence of zero or more unicode characters. The value contains sensitive data that should not be printed or displayed anywhere.   - `DATE_TIME`: The built-in type is a datetime. The value should be in the UTC timezone and the precision is milliseconds.   - `ID`: The built-in type is an ID. The value represents an identifier for a resource.   - `URI`: The built-in type is an URI. The value follows the IRI specification in RFC 3987.   - `ANY_ERROR`: The built-in type is an arbitrary error type. This is used if the value of a typed element can be one of any user defined named type which is an error.   - `DYNAMIC_STRUCTURE`: The built-in type is a dynamic structure. This is used if the value of a typed element can be one of any user defined named type.   - `OPAQUE`: The built-in type is an opaque. This is used if the value of a typed element could be of any type and the actual type will be known only during the execution of the API. This is mostly used in infrastructure resources. 
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

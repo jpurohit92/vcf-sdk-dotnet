@@ -1,0 +1,14 @@
+# Vcenter.Automation.OpenApi.Model.EsxSettingsClustersVmsTransitionMultiSourceEnableSpec
+The Esx.Settings.Clusters.Vms.Transition.MultiSourceEnableSpec schema contains properties that describe specification for enablement of multiple EAM managed solutions into single vLCM managed solution.    Supported only for solutions with deployment type *Esx.Settings.Clusters.Vms.DeploymentType.CLUSTER_VM_SET*.   This schema was added in __vSphere API 9.1.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**EamAgencyIds** | **List&lt;string&gt;** | Identifiers of the cluster bound solutions in EAM (EAM agencies).  This property was added in __vSphere API 9.1.0.0__. | 
+**Solution** | [**EsxSettingsClustersVmsSolutionSpec**](EsxSettingsClustersVmsSolutionSpec.md) | Target desired solution specification in vLCM.  This property was added in __vSphere API 9.1.0.0__. | 
+**SourceVmSelectionSpecs** | [**Dictionary&lt;string, EsxSettingsClustersVmsVmSelectionSpec&gt;**](EsxSettingsClustersVmsVmSelectionSpec.md) | Relation between System VMs and their respective Esx.Settings.Clusters.Vms.VmSelectionSpecs.    Provided VM IDs must be part of the solution being tarnsitioned and must exist in the cluster where the solution is installed.    Provided *Esx.Settings.Clusters.Vms.VmSelectionSpec*s must be present in the applied desired state as part of the *Esx.Settings.Clusters.Vms.ClusterSolutionSpec.alternative_vm_specs*.  This property was added in __vSphere API 9.1.0.0__.  If missing or &#x60;null&#x60;, no *Esx.Settings.Clusters.Vms.VmSelectionSpec*s are applied on the source agencies&#39; System VMs during the enablement.  When clients pass a value of this schema as a parameter, the key in the property map must be an identifier for the resource type: &#x60;VirtualMachine&#x60;. When operations return a value of this schema as a response, the key in the property map will be an identifier for the resource type: &#x60;VirtualMachine&#x60;. | [optional] 
+**ClusterModule** | **string** | Cluster module to be reused for transitioned System VMs. Used to express VM-VM anti affinity relation between System VMs in the vSphere Cluster.    The module must exist for the cluster where the solution is installed.  This property was added in __vSphere API 9.1.0.0__.  If missing or &#x60;null&#x60;, no cluster module is reused. vLCM creates a new module if needed.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;com.vmware.vcenter.cluster.modules&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;com.vmware.vcenter.cluster.modules&#x60;. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

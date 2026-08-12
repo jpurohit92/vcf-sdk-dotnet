@@ -1,0 +1,13 @@
+# Vcenter.Automation.OpenApi.Model.VcenterVchaClusterActiveSpec
+The Vcenter.Vcha.Cluster.ActiveSpec schema contains the deploy specification for the Active Node of the VCHA cluster.  This schema was added in __vSphere API 6.7.1__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**HaNetworkType** | **string** | The type of the Network object used by the HA network.    If the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is set, then the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network_type* field must be set.    If the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is missing or &#x60;null&#x60;, then the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network_type* property is ignored.  Possible values:   - &#x60;STANDARD_PORTGROUP&#x60;: vSphere standard portgroup network.   - &#x60;DISTRIBUTED_PORTGROUP&#x60;: Distributed virtual switch.   For more information see: *Vcenter.Vcha.NetworkType*.  This property was added in __vSphere API 6.7.1__.  If missing or &#x60;null&#x60; and the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is unset, then the second NIC is assumed to be already configured.    If missing or &#x60;null&#x60; and the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is set, then an error is reported. | [optional] 
+**HaNetwork** | **string** | The identifier of the Network object used for the HA network.    If the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is set, then the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network_type* property must be set.    If the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is missing or &#x60;null&#x60;, then the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network_type* property is ignored.  This property was added in __vSphere API 6.7.1__.  If missing or &#x60;null&#x60; and the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network_type* property is unset, then the second NIC is assumed to be already configured.    If missing or &#x60;null&#x60; and the *Vcenter.Vcha.Cluster.ActiveSpec.ha_network* property is set, then an error is reported.  When clients pass a value of this schema as a parameter, the property must be an identifier for the resource type: &#x60;Network:VCenter&#x60;. When operations return a value of this schema as a response, the property will be an identifier for the resource type: &#x60;Network:VCenter&#x60;. | [optional] 
+**HaIp** | [**VcenterVchaIpSpec**](VcenterVchaIpSpec.md) | IP specification for the HA network.  This property was added in __vSphere API 6.7.1__. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

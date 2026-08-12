@@ -1,0 +1,10 @@
+# Vcenter.Automation.OpenApi.Model.VcenterOvfsDiskProvisioningType
+The Vcenter.Ovfs.DiskProvisioningType enumerated type specifies types of disk provisioning that can be set for the disk in the deployed OVF package.  Possible values:   - `MONOLITHIC_SPARSE`: A sparse (allocate on demand) monolithic disk. Disks in this format can be used with other VMware products.   - `MONOLITHIC_FLAT`: A preallocated monolithic disk. Disks in this format can be used with other VMware products.   - `TWO_GB_MAXEXTENT_SPARSE`: A sparse (allocate on demand) disk with 2GB maximum extent size. Disks in this format can be used with other VMware products. The 2GB extent size makes these disks easier to burn to DVD or use on filesystems that don't support large files.   - `TWO_GB_MAXEXTENT_FLAT`: A preallocated disk with 2GB maximum extent size. Disks in this format can be used with other VMware products. The 2GB extent size makes these disks easier to burn to DVD or use on filesystems that don't support large files.   - `THIN`: Space required for thin-provisioned virtual disk is allocated and zeroed on demand as the space is used.   - `THICK`: A thick disk has all space allocated at creation time and the space is zeroed on demand as the space is used.   - `SE_SPARSE`: A sparse (allocate on demand) format with additional space optimizations.   - `EAGER_ZEROED_THICK`: An eager zeroed thick disk has all space allocated and wiped clean of any previous contents on the physical media at creation time. Such disks may take a longer time during creation compared to other disk formats.   - `SPARSE`: Depending on the supported Disk types on the target host, Sparse is mapped to either MonolithicSparse or Thin.   - `FLAT`: Depending on the supported Disk types on the target host, Flat is mapped to either MonolithicFlat or Thick.   This enumeration was added in __vSphere API 9.0.0.0__.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

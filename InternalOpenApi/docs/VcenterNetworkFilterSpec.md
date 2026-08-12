@@ -1,0 +1,15 @@
+# Vcenter.Automation.OpenApi.Model.VcenterNetworkFilterSpec
+The Vcenter.Network.FilterSpec schema contains properties used to filter the results when listing networks (see *GET /vcenter/network*). If multiple properties are specified, only networks matching all of the properties match the filter.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Networks** | **List&lt;string&gt;** | Identifiers of networks that can match the filter.  If missing or &#x60;null&#x60; or empty, networks with any identifier match the filter.  When clients pass a value of this schema as a parameter, the property must contain identifiers for the resource type: &#x60;Network&#x60;. When operations return a value of this schema as a response, the property will contain identifiers for the resource type: &#x60;Network&#x60;. | [optional] 
+**Names** | **List&lt;string&gt;** | Names that networks must have to match the filter (see *Vcenter.Network.Summary.name*).  If missing or &#x60;null&#x60; or empty, networks with any name match the filter. | [optional] 
+**Types** | **List&lt;string&gt;** | Types that networks must have to match the filter (see *Vcenter.Network.Summary.type*).  Possible values:   - &#x60;STANDARD_PORTGROUP&#x60;: vSphere standard portgroup (created and managed on ESX)   - &#x60;DISTRIBUTED_PORTGROUP&#x60;: Distributed virtual portgroup (created and managed through vCenter)   - &#x60;OPAQUE_NETWORK&#x60;: A network whose configuration is managed outside of vSphere. The identifier and name of the network is made available through vSphere so that host and virtual machine virtual ethernet devices can connect to them.   For more information see: *Vcenter.Network.Type*.  If missing or &#x60;null&#x60;, networks with any type match the filter. | [optional] 
+**Folders** | **List&lt;string&gt;** | Folders that must contain the network for the network to match the filter.  If missing or &#x60;null&#x60; or empty, networks in any folder match the filter.  When clients pass a value of this schema as a parameter, the property must contain identifiers for the resource type: &#x60;Folder&#x60;. When operations return a value of this schema as a response, the property will contain identifiers for the resource type: &#x60;Folder&#x60;. | [optional] 
+**Datacenters** | **List&lt;string&gt;** | Datacenters that must contain the network for the network to match the filter.  If missing or &#x60;null&#x60; or empty, networks in any datacenter match the filter.  When clients pass a value of this schema as a parameter, the property must contain identifiers for the resource type: &#x60;Datacenter&#x60;. When operations return a value of this schema as a response, the property will contain identifiers for the resource type: &#x60;Datacenter&#x60;. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

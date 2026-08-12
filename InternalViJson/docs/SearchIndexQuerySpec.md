@@ -1,0 +1,14 @@
+# Vcenter.ViJson.OpenApi.Model.SearchIndexQuerySpec
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Properties** | **List&lt;string&gt;** | Specifies the *SearchIndexQuerySpecResourceType_enum*&#39;s properties to be included in the result set for the query.  There should be no duplicated properties. Each property in the list can be: - top level property name e.g. &#x60;runtime&#x60; - dot-separated chain of property names to indicate a child property.   e.g. &#x60;runtime.powerState&#x60; - the special identifier property _@moRef_ which will extract the   corresponding identifier &#x60;ManagedObjectReference&#x60; of the object    If the property is an array of &#x60;DataObject&#x60; you can additionally: - index a specific object by its \&quot;key\&quot; property   example with string key &#x60;config.network.pnic[\&quot;key-vim.host.PhysicalNic-vmnic0\&quot;]&#x60;   example with int key &#x60;config.hardware[10]&#x60; - get a specific property of specific object   e.g. &#x60;config.network.pnic[\&quot;key-vim.host.PhysicalNic-vmnic0\&quot;].mac&#x60; - use array aggregation to obtain specific properties from all elements   e.g. &#x60;config.network.pnic[*].mac&#x60; - use tupling to obtain tuples of properties   example with aggregation &#x60;config.network.pnic[*].(key,mac,ip)&#x60;   example with indexing &#x60;config.network.pnic[\&quot;key-vim.host.PhysicalNic-vmnic0\&quot;].(key,mac,ip)&#x60;  | [optional] 
+**ResourceType** | **string** | Specifies the resource type (e.g., VirtualMachine, HostSystem or Datacenter) to be queried.  It should be one of the values in the *SearchIndexQuerySpecResourceType_enum* enum.  | 
+**Filters** | [**List&lt;SearchIndexFilter&gt;**](SearchIndexFilter.md) | Define query criteria.  Only properties matching all provided filters will be returned by the query. Provides abilities to specify comparison predicates on the properties of the resources to search for or even on properties of their related resources as well as logical compositions of such predicates.  If unset, the query matches all resource instances of the given *SearchIndexQuerySpecResourceType_enum*  | [optional] 
+**ReturnTotalCount** | **bool** | Indicates whether the result will bring the number of discovered resources as well.  | [optional] 
+**Limit** | **int** | Page size.  If not set, it will return all results that matched the query. Otherwise, it will return the first page of results, and the marker in the *SearchIndexResultSet* will be set, allowing the client to continue the iteration using the *SearchIndexIterationSpec* and *QueryNext* methods.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

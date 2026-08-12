@@ -1,0 +1,14 @@
+# Vcenter.ViJson.OpenApi.Model.VCenterUpdateVStorageObjectMetadataExRequestType
+The parameters of *VcenterVStorageObjectManager.VCenterUpdateVStorageObjectMetadataEx_Task*.  ***Since:*** vSphere API Release 7.0.2.0 
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | [**ID**](ID.md) | The ID of the virtual storage object.  | 
+**Datastore** | [**ManagedObjectReference**](ManagedObjectReference.md) | The datastore to query for the virtual storage objects.  ***Required privileges:*** Datastore.FileManagement  Refers instance of *Datastore*.  | 
+**Metadata** | [**List&lt;KeyValue&gt;**](KeyValue.md) | array of key/value strings. (keys must be unique within the list)  | [optional] 
+**DeleteKeys** | **List&lt;string&gt;** | array of keys need to be deleted  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
